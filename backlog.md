@@ -38,6 +38,12 @@
 
 ## Testing
 
+> **Implementation order is strict — each item depends on the previous:**
+> 1. Fix the BUG below (5 min, self-contained)
+> 2. Refactor unit tests (shared helpers)
+> 3. Add `conftest.py`
+> 4. Build `tests/live/` (four files, any order once 1–3 are done)
+
 ### BUG: `STOP_REASON_MARKER` constant is imported but never used in assertions
 
 **File:** `tests/test_claude_monitor.py`, line 9
